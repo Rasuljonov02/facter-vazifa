@@ -4,7 +4,7 @@
 }
 :root {
 	--btn: rgb(157, 207, 39);
-	--btncolor: rgb(0, 0, 0);
+	--btncolor: rgb(255, 255, 255);
 	--btnborder: red;
 	--bg: rgba(240, 178, 8, 0.795);
 }
@@ -17,20 +17,31 @@ body {
 	margin-top: 100px;
 	background-color: aquamarine;
 }
-.contener {
+.katta {
 	display: grid;
 	place-items: center;
-	width: 70vh;
-	height: 50vh;
+	width: 80vh;
+	/* height: 50vh; */
+	padding: 15px;
 	gap: 20px;
 	border-radius: 10px;
 	background-color: var(--bg);
 }
-.student {
+button {
 	padding: 15px 25px;
 	border: none;
 	color: var(--btncolor);
 	border: 2px solid var(--btnborder);
 	border-radius: 10px;
 	background-color: var(--btn);
+	font-size: 20px;
+	width: 150px;
+}
+.contener {
+	display: flex;
+}
+.span {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
