@@ -1,25 +1,26 @@
 import "./main.css";
 import { faker } from "@faker-js/faker";
 
-const studmalumot: HTMLButtonElement = document.querySelector(".student")!;
+const btn: HTMLButtonElement = document.querySelector(".btn")!;
 const span: HTMLParagraphElement = document.querySelector(".span")!;
 const contener: HTMLDivElement = document.querySelector(".contener")!;
+const name: HTMLParagraphElement = document.querySelector(".name")!;
+const email: HTMLParagraphElement = document.querySelector(".email")!;
+const input: HTMLInputElement = document.querySelector("input")!;
+const xasb: HTMLParagraphElement = document.querySelector(".xasb")!;
+const biol: HTMLParagraphElement = document.querySelector(".biol")!;
+btn.addEventListener("click", (e) => {
+	const randomName = faker.person.fullName();
+	const randomEmail = faker.internet.email();
+	const randombio = faker.lorem.paragraphs();
 
-const randomName = faker.person.fullName();
-const randomEmail = faker.internet.email();
-
-studmalumot.addEventListener("click", () => {
-	const pelementname = document.createElement("p");
-	pelementname.classList.add("malumot");
-	pelementname.innerText = ` name :${randomName}`;
-	span.appendChild(pelementname);
-
-	const pelementemail = document.createElement("p");
-	pelementemail.classList.add("ma’lumot");
-	pelementemail.innerText = `Email :${randomEmail}`;
-	span.appendChild(pelementemail);
+	xasb.innerText = input.value;
+	name.innerText = ` ${randomName}`;
+	biol.innerText = ` ${randombio}`;
+	email.innerText = ` ${randomEmail}`;
+	span.style.display = "flex";
 	contener.style.gap = "20px";
 	console.log("Button clicked!");
+	console.log(randomName);
+	console.log(randomEmail);
 });
-console.log(randomName);
-console.log(randomEmail);

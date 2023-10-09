@@ -3,9 +3,9 @@
 	padding: 0;
 }
 :root {
-	--btn: rgb(157, 207, 39);
-	--btncolor: rgb(255, 255, 255);
-	--btnborder: red;
+	--input: rgb(162, 216, 35);
+	--inputcolor: rgb(0, 0, 0);
+	--inputborder: red;
 	--bg: rgba(240, 178, 8, 0.795);
 }
 body {
@@ -30,18 +30,44 @@ body {
 button {
 	padding: 15px 25px;
 	border: none;
-	color: var(--btncolor);
-	border: 2px solid var(--btnborder);
+	color: var(--inputcolor);
+	border: 2px solid var(--inputborder);
 	border-radius: 10px;
-	background-color: var(--btn);
+	background-color: var(--input);
 	font-size: 20px;
 	width: 150px;
 }
 .contener {
 	display: flex;
+
+	gap: 10px;
+}
+label {
+	color: var(--inputcolor);
+	font-size: 30px;
 }
 .span {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	gap: 10px;
+}
+.student {
+	padding: 10px 15px;
+	width: 250px;
+	border-radius: 10px;
+}
+tr {
+	display: flex;
+	gap: 10px;
+}
+tbody {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.as {
+	width: 100px;
+}
+.biol {
+	width: 350px;
 }
