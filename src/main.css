@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--btn: rgb(157, 207, 39);
+	--btncolor: rgb(0, 0, 0);
+	--btnborder: red;
+	--bg: rgba(240, 178, 8, 0.795);
+}
+body {
+	display: grid;
+	place-items: center;
+
+	width: 100%;
+
+	margin-top: 100px;
+	background-color: aquamarine;
+}
+.contener {
+	display: grid;
+	place-items: center;
+	width: 70vh;
+	height: 50vh;
+	gap: 20px;
+	border-radius: 10px;
+	background-color: var(--bg);
+}
+.student {
+	padding: 15px 25px;
+	border: none;
+	color: var(--btncolor);
+	border: 2px solid var(--btnborder);
+	border-radius: 10px;
+	background-color: var(--btn);
+}
