@@ -6,7 +6,7 @@
 	--input: rgb(162, 216, 35);
 	--inputcolor: rgb(0, 0, 0);
 	--inputborder: red;
-	--bg: rgba(240, 178, 8, 0.795);
+	--bg: rgba(240, 178, 8, 0.486);
 }
 body {
 	display: grid;
@@ -15,7 +15,7 @@ body {
 	width: 100%;
 
 	margin-top: 100px;
-	background-color: aquamarine;
+	background-color: rgb(39, 44, 42);
 }
 .katta {
 	display: grid;
@@ -37,6 +37,15 @@ button {
 	font-size: 20px;
 	width: 150px;
 }
+button:hover {
+	background-color: rgb(214, 179, 24);
+	color: wheat;
+	border: 2px solid yellowgreen;
+}
+button:active {
+	transform: scale(0.8);
+}
+
 .contener {
 	display: flex;
 
@@ -73,9 +82,12 @@ tbody {
 }
 .hato {
 	border: 2px solid red;
-	box-shadow: 3px 3px 6px rgba(128, 0, 0, 1);
+	box-shadow: 0px 0px 20px rgba(128, 0, 0, 1);
 }
-.zor{
+.zor {
 	border: 2px solid rgb(94, 255, 0);
-	box-shadow: 3px 3px 6px rgb(58, 128, 0)
+	box-shadow: 0px 0px 20px rgb(58, 128, 0);
+}
+h4 {
+	color: rgba(7, 30, 36, 0.705);
 }

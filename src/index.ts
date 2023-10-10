@@ -10,6 +10,7 @@ const email: HTMLParagraphElement = document.querySelector(".email")!;
 const input: HTMLInputElement = document.querySelector("#kasb")!;
 const xasb: HTMLParagraphElement = document.querySelector(".xasb")!;
 const biol: HTMLParagraphElement = document.querySelector(".biol")!;
+const h4: HTMLParagraphElement = document.querySelector("h4")!;
 
 const schema = yup.object().shape({
 	name: yup
@@ -19,10 +20,21 @@ const schema = yup.object().shape({
 });
 
 btn.addEventListener("click", (e) => {
+	const inputValue = input.value.trim();
+	const isNumber = !isNaN(Number(inputValue));
+
+	if (isNumber) {
+		h4.innerText = "hato qiymat kirittingiz strung kiriting";
+		input.className = "hato";
+
+		return;
+	}
+	h4.innerText = "";
+
 	const formData = {
-		name: input.value,
+		name: inputValue,
 	};
-	let s: number = 5;
+	let s: number = 3;
 	schema
 		.validate(formData)
 		.then(() => {
@@ -37,22 +49,21 @@ btn.addEventListener("click", (e) => {
 			input.className = "zor";
 		})
 		.catch((error) => {
-
 			const ll = setInterval(() => {
 				if (s === 0) {
-						input.className = "";
-						clearInterval(ll);
+					input.className = "";
+					clearInterval(ll);
 				}
 
 				s--;
-		}, 1000);
+			}, 1000);
 			input.className = "hato";
 		});
 	const randomName = faker.person.fullName();
 	const randomEmail = faker.internet.email();
 	const randomBio = faker.lorem.paragraphs();
 
-	xasb.innerText = input.value;
+	xasb.innerText = inputValue;
 	name.innerText = ` ${randomName}`;
 	biol.innerText = ` ${randomBio}`;
 	email.innerText = ` ${randomEmail}`;
