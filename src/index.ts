@@ -11,6 +11,7 @@ const input: HTMLInputElement = document.querySelector("#kasb")!;
 const xasb: HTMLParagraphElement = document.querySelector(".xasb")!;
 const biol: HTMLParagraphElement = document.querySelector(".biol")!;
 const h4: HTMLParagraphElement = document.querySelector("h4")!;
+const tel: HTMLParagraphElement = document.querySelector(".tel")!;
 
 const schema = yup.object().shape({
 	name: yup
@@ -21,9 +22,9 @@ const schema = yup.object().shape({
 
 btn.addEventListener("click", (e) => {
 	const inputValue = input.value.trim();
-	const isNumber = !isNaN(Number(inputValue));
+	const numberr = !isNaN(Number(inputValue));
 
-	if (isNumber) {
+	if (numberr) {
 		h4.innerText = "hato qiymat kirittingiz strung kiriting";
 		input.className = "hato";
 
@@ -63,6 +64,8 @@ btn.addEventListener("click", (e) => {
 	const randomEmail = faker.internet.email();
 	const randomBio = faker.lorem.paragraphs();
 
+	const randomtel = faker.phone.number();
+	tel.innerText = ` ${randomtel}`;
 	xasb.innerText = inputValue;
 	name.innerText = ` ${randomName}`;
 	biol.innerText = ` ${randomBio}`;
